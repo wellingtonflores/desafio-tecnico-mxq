@@ -55,7 +55,7 @@ export default function App() {
                 Alterar senha
               </NavLink>
               <button
-                onClick={handleLogout} // Botão para deslogar o usuário
+                onClick={handleLogout} 
                 className="text-lg font-medium text-sky-500 hover:text-sky-600"
               >
                 Sair
@@ -94,13 +94,13 @@ export default function App() {
           <div className="text-center p-6 bg-white rounded-xl shadow-md">
             <h1 className="text-2xl font-bold mb-2">
               {isAuth
-                ? `Bem-vindo ao nosso sistema, ${userName}!` // Mensagem personalizada para usuários autenticados
-                : "Bem-vindo ao Sistema!"} // Mensagem genérica para visitantes
+                ? `Bem-vindo ao nosso sistema, ${userName}!` 
+                : "Bem-vindo ao Sistema!"} 
             </h1>
             <p className="text-gray-700">
               {isAuth
-                ? "Agora você pode explora-lo pelo menu acima." // Instrução para usuários autenticados
-                : "Por favor, selecione uma opção no menu para continuar."} // Instrução para visitantes
+                ? "Agora você pode explora-lo pelo menu acima."
+                : "Por favor, selecione uma opção no menu para continuar."} 
             </p>
           </div>
         ) : (
