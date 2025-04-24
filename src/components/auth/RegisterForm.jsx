@@ -9,20 +9,24 @@ import FormMessage from "../commom/FormMessage";
 import FormContainer from "../commom/FormContainer";
 
 export default function FormCadastro() {
+  // Estado para armazenar os dados do formulário(nome, email e senha)
   const [dados, setDados] = useState({
     name: "",
     email: "",
     password: "",
   });
 
+  // Estado para exibir mensagens de sucesso ou erro
   const [mensagem, setMensagem] = useState("");
   const [erro, setErro] = useState(false);
 
   const navigate = useNavigate();
 
+  // Função para lidar com o envio do formulário
   async function handleSubmit(e) {
     e.preventDefault(); // Previne o comportamento padrão do form (recarregar a página)
     try {
+      
       await servicosApi.cadastrarUsuario(dados);
       setMensagem("Usuário cadastrado com sucesso!");
       setErro(false);

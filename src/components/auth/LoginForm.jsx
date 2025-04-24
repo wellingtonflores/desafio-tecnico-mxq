@@ -9,22 +9,33 @@ import FormLink from "../commom/FormLink";
 import FormContainer from "../commom/FormContainer";
 
 export default function FormEntrar() {
+  // Estado para armazenar as credenciais do usuário
   const [credenciais, setCredenciais] = useState({
     email: "",
     password: "",
   });
 
+  // Estado para armazenar a mensagem de sucesso ou erro
+  // e o estado de erro
   const [mensagem, setMensagem] = useState("");
   const [erro, setErro] = useState(false);
 
   const navigate = useNavigate();
 
+  // Função para lidar com o envio do formulário
+  // e realizar o login do usuário
   async function handleSubmit(e) {
-    e.preventDefault();
+    e.preventDefault(); // Previne o comportamento padrão do formulário
+    // Verifica se os campos estão preenchidos
     try {
+      // Chama a API para entrar com as credenciais do usuário
       const resposta = await servicosApi.entrarUsuario(credenciais);
+
+      // Armazena o token e o nome do usuário no localStorage
       localStorage.setItem("token", resposta.token);
       localStorage.setItem("userName", resposta.user.name);
+      
+      // Exibe mensagem de sucesso e redireciona para a página inicial
       setMensagem("Login realizado com sucesso!");
       setErro(false);
       setTimeout(() => {
@@ -45,6 +56,7 @@ export default function FormEntrar() {
         {/* gap-6: espaçamento de 1.5rem (24px) entre itens */}
         {/* w-full: largura 100% do container */}
 
+        
         <FormTitle>Entre em nossa plataforma</FormTitle>
 
         <Input
