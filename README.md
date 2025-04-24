@@ -67,7 +67,7 @@ A ADICIONAR...
 ## Decisões de Implementação
 
 1. **Componentização**: 
-   - Componentes reutilizáveis foram criados para formulários (`FormContainer`, `Input`, `SubmitButton`) e mensagens (`FormMessage`), garantindo consistência e facilidade de manutenção.
+   - Componentes reutilizáveis foram criados para formulários (`FormContainer`, `Input`, `SubmitButton`, `FormTitle`, `FormLink`) e mensagens (`FormMessage`), garantindo consistência e facilidade de manutenção.
    
 2. **Gerenciamento de Autenticação**:
    - O token JWT é armazenado no `localStorage` para persistência entre sessões.
