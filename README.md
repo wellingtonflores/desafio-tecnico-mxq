@@ -4,6 +4,30 @@ Este é um projeto desenvolvido como parte de um desafio técnico. Ele consiste 
 
 ---
 
+## Configuração e Execução
+
+### Pré-requisitos
+
+- Node.js (versão 16 ou superior)
+- Gerenciador de pacotes (npm ou yarn)
+
+### Passos para executar o projeto
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/wellingtonflores/desafio-tecnico-mxq
+   cd desafio-tecnico-mxq
+
+2. Instale as dependências:
+   npm install
+
+3. Inicie o servidor de desenvolvimento:
+    npm run dev
+
+4. Acesse a aplicação no navegador em http://localhost:5173.
+
+---
+
 ## Processo de Desenvolvimento
 
 ### Abordagem Geral
@@ -81,28 +105,6 @@ A ADICIONAR...
    - Um serviço centralizado (`src/services/api.jsx`) foi criado para gerenciar as chamadas à API.
 
 ---
-
-## Configuração e Execução
-
-### Pré-requisitos
-
-- Node.js (versão 16 ou superior)
-- Gerenciador de pacotes (npm ou yarn)
-
-### Passos para executar o projeto
-
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/wellingtonflores/desafio-tecnico-mxq
-   cd desafio-tecnico-mxq
-
-2. Instale as dependências:
-   npm install
-
-3. Inicie o servidor de desenvolvimento:
-    npm run dev
-
-4. Acesse a aplicação no navegador em http://localhost:5173.
 
 Deploy
 O projeto está configurado para deploy na Vercel. O arquivo vercel.json contém as configurações necessárias para redirecionar todas as rotas para o index.html.
