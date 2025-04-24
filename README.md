@@ -4,8 +4,6 @@ Este é um projeto desenvolvido como parte de um desafio técnico. Ele consiste 
 
 ---
 
----
-
 ## Processo de Desenvolvimento
 
 ### Abordagem Geral
@@ -41,7 +39,7 @@ Este é um projeto desenvolvido como parte de um desafio técnico. Ele consiste 
 
 A estrutura do projeto é organizada da seguinte forma:
 
-. ├── .gitignore ├── eslint.config.js ├── index.html ├── package.json ├── README.md ├── vercel.json ├── vite.config.js └── src/ ├── App.jsx ├── index.css ├── main.jsx ├── components/ │ ├── auth/ │ │ ├── LoginForm.jsx │ │ ├── ProtectedRoute.jsx │ │ └── RegisterForm.jsx │ ├── commom/ │ │ ├── FormContainer.jsx │ │ ├── FormLink.jsx │ │ ├── FormMessage.jsx │ │ ├── FormTitle.jsx │ │ ├── Input.jsx │ │ └── SubmitButton.jsx │ └── user/ │ ├── ChangePassword.jsx │ └── UserList.jsx └── services/ └── api.jsx
+A ADICIONAR...
 
 ---
 
@@ -95,7 +93,7 @@ A estrutura do projeto é organizada da seguinte forma:
 
 1. Clone o repositório:
    ```bash
-   git clone <URL_DO_REPOSITORIO>
+   git clone https://github.com/wellingtonflores/desafio-tecnico-mxq
    cd desafio-tecnico-mxq
 
 2. Instale as dependências:
@@ -105,30 +103,6 @@ A estrutura do projeto é organizada da seguinte forma:
     npm run dev
 
 4. Acesse a aplicação no navegador em http://localhost:5173.
-
-Endpoints da API
-A aplicação consome a API disponível em https://login-api.mxqservices.com.br/users. Os endpoints utilizados são:
-
-POST /register: Cadastro de usuário.
-{
-  "name": "João",
-  "email": "joao@email.com",
-  "password": "123456"
-}
-
-POST /login: Login de usuário.
-{
-  "email": "joao@email.com",
-  "password": "123456"
-}
-
-GET /all-users: Listagem de usuários (requer header x-auth-token com o token JWT).
-
-PATCH /change-password: Alteração de senha (requer header x-auth-token com o token JWT).
-{
-  "oldPassword": "123456",
-  "newPassword": "novaSenha123"
-}
 
 Deploy
 O projeto está configurado para deploy na Vercel. O arquivo vercel.json contém as configurações necessárias para redirecionar todas as rotas para o index.html.
