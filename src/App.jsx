@@ -99,8 +99,8 @@ export default function App() {
             </h1>
             <p className="text-gray-700">
               {isAuth
-                ? "Agora você pode explora-lo pelo menu acima."
-                : "Por favor, selecione uma opção no menu para continuar."} 
+                ? "Agora você pode explora-lo pela barra de navegação acima."
+                : "Por favor, selecione uma opção na barra de navegação acima para começar."} 
             </p>
           </div>
         ) : (
