@@ -23,10 +23,11 @@ export default function FormCadastro() {
   const navigate = useNavigate();
 
   // Função para lidar com o envio do formulário
+  // e registrar o usuário
   async function handleSubmit(e) {
     e.preventDefault(); // Previne o comportamento padrão do form (recarregar a página)
+    // Verifica se os campos estão preenchidos
     try {
-      
       await servicosApi.cadastrarUsuario(dados);
       setMensagem("Usuário cadastrado com sucesso!");
       setErro(false);

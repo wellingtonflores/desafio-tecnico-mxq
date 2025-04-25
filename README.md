@@ -52,8 +52,8 @@ Este é um projeto desenvolvido como parte de um desafio técnico. Ele consiste 
    - Artigos e tutoriais sobre autenticação JWT e proteção de rotas em React.
 
 5. **Tempo Estimado**:
-   - Planejamento e configuração inicial: 1 hora.
-   - Desenvolvimento das telas e componentes: 4 horas.
+   - Planejamento e configuração inicial: 2 hora.
+   - Desenvolvimento das telas e componentes: 48 horas.
    - Integração com a API e testes: 3 horas.
    - Documentação e ajustes finais: 2 horas.
 
@@ -61,9 +61,28 @@ Este é um projeto desenvolvido como parte de um desafio técnico. Ele consiste 
 
 ## Estrutura do Projeto
 
-A estrutura do projeto é organizada da seguinte forma:
+### Visão Geral
+O projeto está organizado em dois diretórios principais: `components` e `services`. Essa estrutura promove a separação de responsabilidades e modularidade, facilitando a manutenção e escalabilidade do código.
 
-A ADICIONAR...
+### 1. `services`
+Este diretório contém a lógica relacionada à API e serviços. Ele é responsável por gerenciar todas as interações com APIs externas ou sistemas backend, como busca de dados, envio de requisições e tratamento de respostas.
+
+### 2. `components`
+Este diretório está subdividido em três subdiretórios: `auth`, `common` e `user`.
+
+#### a. `auth`
+- Contém componentes relacionados à autenticação e autorização.
+- Inclui funcionalidades para login, registro de usuários e proteção de rotas, garantindo que apenas usuários autenticados possam acessar determinadas partes do sistema.
+
+#### b. `common`
+- Contém componentes reutilizáveis que podem ser compartilhados em diferentes partes da aplicação.
+- Promove a reutilização de código e consistência na interface e experiência do usuário.
+
+#### c. `user`
+- Contém componentes relacionados às operações específicas do usuário dentro do sistema.
+- Essas operações estão disponíveis apenas para usuários logados e incluem funcionalidades de alterar a senha e listar todos os usuarios do sistema.
+
+Essa estrutura garante uma separação clara entre componentes reutilizáveis, lógica de autenticação e funcionalidades específicas do usuário, enquanto mantém a lógica de API centralizada no diretório `services`.
 
 ---
 
